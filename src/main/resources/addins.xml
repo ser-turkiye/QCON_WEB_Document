@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension xmlns="http://addins.webcube.ser.com/v1" classpath=".;WEB-INF/lib;*">
     <scripts>
-        <script active="{cxiBoolean}1"
+        <script active="{cxiBoolean}0"
                 class="com.ser.WC"
                 name="Welcome-script"
                 processDef=""
-                processType="976b2a94-e1d5-4600-bc8a-c68883332981"
+                processType=""
                 reference=""
                 server=""
                 system=""
                 type="global"/>
         <script active="{cxiBoolean}1"
-                class="com.ser.DateChecker"
-                name="Date-check-script"
+                class="com.ser.EngDocument"
+                name="ENG Document Field Checker"
                 processDef=""
-                processType="976b2a94-e1d5-4600-bc8a-c68883332981"            
-                reference="9057ecbf-c0d9-4f5e-b4eb-92e3669310ae"
+                processType=""
+                reference="3b3078f8-c0d0-4830-b963-88bebe1c1462"
                 server=""
                 system=""
-                type="document"/>
+                type="keychange"/>
     </scripts>
     <security>
         <configuration>

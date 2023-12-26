@@ -68,7 +68,7 @@ class CubeDeployPlugin implements Plugin<Project> {
     String baseURL = "http://dev.serturkiye.com/webcube"
 
     Map<String,String> params = [
-            name    : "WCS-from-template",
+            name    : "QCON-Document-Fields",
             user    : "admin",
             password: "Ser@2023",
             server  : "websrv01",
