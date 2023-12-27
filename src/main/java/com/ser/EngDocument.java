@@ -20,16 +20,19 @@ public class EngDocument extends KeyChangeScripting {
 
     @Override
     public void onInit() throws EvitaWebException {
-        lastVersionReadOnly();
-        projectSelectorVisible();
+
+            lastVersionReadOnly();
+            projectSelectorVisible();
+
     }
 
     private void lastVersionReadOnly() {
 
         IControl fldLastVersion = this.getDialog().getFieldByName("ccmReleased");
 
-        if(getDocument().getDescriptorValue("ccmReleased")!=null && getDocument().getDescriptorValue("ccmReleased").equals("1")) {
+        if(fldLastVersion!=null && getDocument().getDescriptorValue("ccmReleased")!=null && getDocument().getDescriptorValue("ccmReleased").equals("1")) {
             fldLastVersion.setReadonly(true);
+
         }
     }
     private void projectSelectorVisible() throws EvitaWebException {
@@ -37,8 +40,8 @@ public class EngDocument extends KeyChangeScripting {
         String prjCode = getDocument().getDescriptorValue("ccmPRJCard_code");
         ISearchSelectionControl projSelect = this.getDialog().getSearchSelectionControl("prjSelector");
 
-        if(prjCode!= null && !prjCode.isEmpty() ) {
-            if (projSelect != null) projSelect.setVisible(false);
+        if(projSelect != null && prjCode!= null && !prjCode.isEmpty() ) {
+            projSelect.setVisible(false);
         }
     }
 
